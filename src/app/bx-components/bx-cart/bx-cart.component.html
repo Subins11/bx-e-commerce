@@ -1,0 +1,36 @@
+<app-bx-header></app-bx-header>
+
+<div class="bx--cartPage" *ngIf="isAuthenticated">
+  <h2>Your Cart</h2>
+  <div class="bx--addToCart" *ngFor="let item of cartItems ; let i = index">
+    <div class="bx--images">
+      <img src="{{ item.thumbnail }}" />
+    </div>
+    <div class="bx--productDetails">
+      <h4>{{ item.title }}</h4>
+      <h5>{{ item.rating | Rating }}</h5>
+      <h5>{{ item.discount }}</h5>
+      <h4>{{ item.price | DOLLAR }}</h4>
+
+      <app-bx-button
+        [class]="'bx--btn  bx--btn__removeCart'"
+        [text]="'Remove'"
+        (buttonClick)="removeItem(i)"
+      ></app-bx-button>
+    </div>
+  </div>
+  <div class="border"></div>
+
+  <div class="bx--total">
+    <p>
+      Total Price: <strong>${{ getTotalPrice() }}</strong>
+    </p>
+    <p>
+      Quantity: <strong>{{ getTotalItems() }}</strong>
+    </p>
+  </div>
+</div>
+<div *ngIf="!isAuthenticated">
+Please Login
+</div>
+<app-bx-footer></app-bx-footer>

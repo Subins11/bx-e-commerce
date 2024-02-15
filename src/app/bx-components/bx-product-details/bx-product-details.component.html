@@ -1,0 +1,36 @@
+<app-bx-header></app-bx-header>
+  
+  <div class="bx--productDetails" >
+    <div class="bx--addToCart" *ngIf="product$ | async as product;">
+    <div class="bx--images">
+    <img src="{{ product.thumbnail }}" alt="Product image" appBxTransition/>
+      <div class="bx--images__sub">
+        <div *ngFor="let image of product.images" appBxTransition>
+             <img src="{{ image}}" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="bx--productDesc">
+    <h2>{{ product.title }}</h2>
+    <h5>{{ product.rating | Rating }}</h5>
+    <h5>{{product.discountPercentage}} % OFF</h5>
+    <h2>{{ product.price | DOLLAR }}</h2>
+    <h2>{{ product.discount }}</h2>
+    <p>{{product.description}}</p>
+    <div class="bx--productDesc__button">
+      <app-bx-button
+        [class]="'bx--btn bx--btn__buynowCart'"
+        [text]="'Buy Now'"
+      ></app-bx-button>
+      <app-bx-button
+        [class]="'bx--btn bx--btn__cartPage'"
+        [text]="'Add to Cart'"
+        (buttonClick)="addToCart(product)"
+      ></app-bx-button>
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+<app-bx-footer></app-bx-footer>

@@ -1,0 +1,192 @@
+@import "../../../../assets/bx-scss/mixins";
+@import "../../../../assets/bx-scss/base";
+
+.bx--navbar {
+  justify-content: center;
+  .navbar-custom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+    box-shadow: 10px 10px 20px rgba(44, 44, 44, 0.1);
+
+    .container-fluid {
+      .navbar-brand {
+        position: relative;
+        img {
+          width: 150px;
+          height: 51px;
+        }
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      margin-left: 700px;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        padding-left: 30px;
+        color: $secondary-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        transition: 0.5s;
+
+        img{
+          width: 20px;
+          height: 20px;
+        }
+      }
+      a:hover {
+        color: $secondary-color-2;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include laptops {
+  .bx--navbar {
+    justify-content: center;
+    .navbar-custom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      padding-left: 30px;
+      box-shadow: 10px 10px 20px rgba(44, 44, 44, 0.1);
+
+      .container-fluid {
+        .navbar-brand {
+          position: relative;
+          bottom: 0px;
+          img {
+            width: 150px;
+            height: 51px;
+          }
+        }
+      }
+
+      .navbar-nav {
+        display: flex;
+        margin-left: 500px;
+        position: relative;
+
+        a {
+          text-decoration: none;
+          padding-left: 10px;
+          color: $secondary-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          transition: 0.5s;
+        }
+        a:hover {
+          color: $secondary-color-2;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .bx--navbar {
+    justify-content: center;
+    .navbar-custom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      padding-left: 30px;
+      box-shadow: 10px 10px 20px rgba(44, 44, 44, 0.1);
+
+      .container-fluid {
+        .navbar-brand {
+          position: relative;
+          bottom: 0px;
+          img {
+            width: 150px;
+            height: 51px;
+          }
+        }
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10px;
+        position: relative;
+        bottom: 10px;
+
+        a {
+          text-decoration: none;
+          padding-left: 10px;
+          color: $secondary-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          transition: 0.5s;
+        }
+        a:hover {
+          color: $secondary-color-2;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .bx--navbar {
+    justify-content: center;
+    .navbar-custom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      padding-left: 30px;
+      box-shadow: 10px 10px 20px rgba(44, 44, 44, 0.1);
+
+      .container-fluid {
+        .navbar-brand {
+          position: relative;
+          //   bottom: 10px;
+          img {
+            width: 150px;
+            height: 51px;
+          }
+        }
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10px;
+        position: relative;
+        bottom: 10px;
+
+        a {
+          text-decoration: none;
+          padding-left: 10px;
+          color: $secondary-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          transition: 0.5s;
+        }
+        a:hover {
+          color: $secondary-color-2;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<div class="bx--productList">
+  <h1>TOP SELLING</h1>
+  <div class="bx--categories">
+    <select class="bx--options" (change)="onCategoryChange($event)">
+      <option value="all">All Items</option>
+      <option value="smartphones">Mobiles</option>
+      <option value="laptops">Laptops</option>
+      <option value="skincare">Skincare</option>
+      <option value="fragrances">Fragrances</option>
+      <option value="groceries">Groceries</option>
+      <option value="home-decoration">Home-Decoration</option>
+    </select>
+  </div>
+  <div class="bx--productLists">
+    <div class="bx--productCards" *ngFor="let product of productList" appBxTransition>
+      <div (click)="navigateToProductDetails(product.id)">
+        <img src="{{ product.thumbnail }}" alt="Product image">
+        <h6>{{ product.title }}</h6>
+        <h6>{{ product.rating | Rating}}</h6>
+        <p>{{ product.description}}</p>
+        <h6>{{ product.price | DOLLAR }}</h6>
+      </div>
+      <div class="bx--productCards__button">
+        <app-bx-button
+          [class]="'bx--btn bx--btn__buynow'"
+          [text]="'Buy Now'"
+        ></app-bx-button>
+        <app-bx-button
+          [class]="'bx--btn bx--btn__cart'"
+          [text]="'Add to Cart'"
+          (buttonClick)="addToCart(product)"
+        ></app-bx-button>
+      </div>   
+    </div>
+  </div>
+</div>

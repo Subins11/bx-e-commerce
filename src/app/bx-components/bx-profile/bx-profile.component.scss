@@ -1,0 +1,45 @@
+@import "../../../assets/bx-scss/mixins";
+@import "../../../assets/bx-scss/base";
+
+.bx--userDetails {
+  width: 100%;
+  h2 {
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    color: $secondary-color;
+  }
+  .bx--profilepic {
+    margin: 20px auto;
+    width: 300px;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 60px;
+      border: 1px solid $secondary-color-2;
+    }
+  }
+  .bx--details {
+    width: 300px;
+    margin: 30px auto;
+    text-align: left;
+    h6 {
+      font-size: 14px;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+    strong {
+      color: $black;
+    }
+  }
+  .bx--profileButton {
+    width: 400px;
+    margin: 10px auto;
+    align-items: center;
+  }
+}
+.bx--editForm {
+    width: 300px;
+    margin: 10px auto;
+}

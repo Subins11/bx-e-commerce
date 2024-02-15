@@ -1,0 +1,67 @@
+<app-bx-header></app-bx-header>
+
+<div class="bx--userDetails" *ngIf="isAuthenticated">
+    <h2>Profile Information</h2>
+<div class="bx--profilepic">
+<img src="https://eu.mrmw.net/wp-content/uploads/2017/07/dp-avatar.png" alt="">
+<app-bx-button
+  [class]="'bx--btn bx--btn__edit'"
+  [text]="'EDIT'"
+  *ngIf="!isEditing && personalDetails.length > 0"
+  (buttonClick)="editDetails(personalDetails[0])"
+></app-bx-button>
+
+</div>
+<ng-container  *ngIf="hideDetails">
+  <div class="bx--details" *ngFor="let details of personalDetails">
+  <h6>NAME: <strong>{{details.name}}</strong></h6>
+  <h6>EMAIL: <strong>{{details.email}}</strong></h6>
+  <h6>PHONE NO: <strong>{{details.phone}}</strong></h6>
+  <h6>ADDRESS: <strong>{{details.address}}</strong></h6>
+ </div>  
+</ng-container>
+ 
+ <div class="bx--editForm" *ngIf="isEditing">
+    <form [formGroup]="editForm">
+        <app-bx-input
+          [class]="'bx--input bx--input__edit'"
+          [placeholder]="'Name'"
+          [formControlName]="'name'"
+        ></app-bx-input>
+        <app-bx-input
+          [class]="'bx--input bx--input__edit'"
+          [placeholder]="'email'"
+          [formControlName]="'email'"
+        ></app-bx-input>
+        <app-bx-input
+          [class]="'bx--input bx--input__edit'"
+          [placeholder]="'phone'"
+          [formControlName]="'phone'"
+        ></app-bx-input>
+        <app-bx-input
+          [class]="'bx--input bx--input__edit'"
+          [placeholder]="'address'"
+          [formControlName]="'address'"
+        ></app-bx-input>
+      </form>
+      <div class="bx--profileButton">
+        <app-bx-button
+        [class]="'bx--btn bx--btn__cancelChanges'"
+        [text]="'CANCEL'"
+        (buttonClick)="cancelEdit()"
+      ></app-bx-button>
+      <app-bx-button
+        [class]="'bx--btn bx--btn__saveChanges'"
+        [text]="'SAVE CHANGES'"
+        (buttonClick)="updateDetail()"
+      ></app-bx-button>
+     </div>
+</div>
+
+</div>
+
+<div *ngIf="!isAuthenticated">
+    Please Login
+   </div>
+
+<app-bx-footer></app-bx-footer>

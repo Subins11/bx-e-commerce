@@ -1,0 +1,201 @@
+@import "../../../../assets/bx-scss/mixins";
+@import "../../../../assets/bx-scss/base";
+
+.bx--btn {
+  &__search {
+    width: 150px;
+    height: 40px;
+    background-color: $secondary-color;
+    color: $secondary-color-2;
+    font-size: 14px;
+    border: none;
+    margin-top: 10px;
+  }
+  &__search:hover {
+    background-color: $black;
+    border: 1px solid $primary-color;
+    color: $secondary-color-2;
+  }
+  &__buynow{
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $secondary-color;
+    color: $secondary-color-2;
+    border: none;
+    margin: 10px;
+  }
+  &__buynow:hover{
+    background-color: $black;
+    border: 1px solid $primary-color;
+    color: $secondary-color-2;
+  }
+  &__cart{
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    margin: 10px;
+  }
+  &__cart:hover{
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &__login{
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    margin: 20px;
+  }
+  &__login:hover{
+    background-color: $black;
+    border: 1px solid $primary-color;
+    color: $secondary-color-2;
+  }
+  &__cancel{
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    margin: 20px;
+  }
+  &__cancel:hover{
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &__buynowCart{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    background-color: $secondary-color;
+    color: $secondary-color-2;
+    border: none;
+    margin: 10px;
+  }
+  &__buynowCart:hover{
+    background-color: $black;
+    border: 1px solid $primary-color;
+    color: $secondary-color-2;
+  }
+  &__cartPage{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    margin: 10px;
+  }
+  &__cartPage:hover{
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &__removeCart{
+    width: 100px;
+    height: 30px;
+    background-color: $black;
+    color: $secondary-color-2;
+    font-size: 10px;
+    border: none;
+    margin-top: 10px;
+  }
+  &__removeCart:hover{
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &__cancelChanges{
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $secondary-color;
+    color: $secondary-color-2;
+    border: none;
+    margin: 10px;
+  }
+  &__cancelChanges:hover{
+    background-color: $black;
+    border: 1px solid $primary-color;
+    color: $secondary-color-2; 
+  }
+  &__saveChanges{
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+    margin: 10px;
+  }
+  &__saveChanges:hover{
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &__edit{
+    width: 50px;
+    height: 25px;
+    background-color: $black;
+    color: $secondary-color-2;
+    font-size: 10px;
+    border: none;
+    margin-left: 50px;
+  }
+}
+
+
+@include mobile{
+  .bx--btn {
+    &__search {
+      width: 100px;
+      height: 30px;
+      font-size: 12px;
+    }
+    &__buynow{
+      width: 60px;
+      height: 25px;
+      font-size: 8px;
+      margin: 5px;
+    }
+    &__cart{
+      width: 60px;
+      height: 25px;
+      font-size: 8px;
+      margin: 5px;
+    }
+    &__login{
+      width: 80px;
+      height: 25px;
+      font-size: 12px;
+      margin: 10px;
+    }
+    &__cancel{
+      width: 80px;
+      height: 25px;
+      font-size: 12px;
+      margin: 10px;
+    }
+    &__buynowCart{
+      width: 150px;
+      height: 35px;
+      font-size: 14px;
+      margin: 10px;
+    }
+    &__cartPage{
+      width: 150px;
+      height: 35px;
+      font-size: 14px;
+      margin: 10px;
+    }
+  }
+}

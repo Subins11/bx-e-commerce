@@ -1,0 +1,59 @@
+@import "../../../assets/bx-scss/mixins";
+@import "../../../assets/bx-scss/base";
+
+.bx--cartPage {
+  width: 100%;
+  h2 {
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    color: $secondary-color;
+  }
+  .bx--addToCart {
+    margin-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    .bx--images {
+      float: left;
+      img {
+        width: 120px;
+        height: 120px;
+        border: 1px solid $primary-color;
+      }
+    }
+    .bx--productDetails {
+      padding-left: 50px;
+
+      h4 {
+        font-size: 14px;
+        font-weight: 800;
+        color: $primary-color;
+      }
+      h5 {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+  .border {
+    width: 100%;
+    height: 1px;
+    background-color: $primary-color;
+    margin-top: 30px;
+  }
+  .bx--total {
+    float: right;
+    margin-right: 100px;
+    margin-top: 20px;
+
+    p {
+      font-size: 14px;
+
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+}
